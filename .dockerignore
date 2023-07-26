@@ -1,0 +1,17 @@
+# folders
+*/temp*
+*/*/temp*
+temp?
+#data
+.conda
+__pycache__
+
+# files
+Dockerfile
+.gitignore
+commands.md
+README.md
+train_dolly.py
+dockertest
+docs
+logs_aim

@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  trainllm:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes: 
+      - ./models:/app/models
