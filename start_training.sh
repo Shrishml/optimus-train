@@ -2,11 +2,11 @@ echo 'caching data'
 ls
 python3 cache_data.py
 echo 'starting training'
-deepspeed --num_gpus 4 \
+deepspeed --num_gpus 2 \
   --module trainer \
-  --input-model "EleutherAI/pythia-6.9b" \
+  --input-model "gpt2" \
   --deepspeed "configs/ds_t4_config.json" \
-  --epochs 2 \
+  --epochs 1 \
   --local-output-dir "checkpoints" \
   --per-device-train-batch-size 2 \
   --per-device-eval-batch-size 2 \
